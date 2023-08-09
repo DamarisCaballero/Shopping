@@ -1,10 +1,11 @@
-import { useRoutes, BrowserRouter } from 'react-router-dom'
-import Home from '../Home'
-import MyAccount from '../MyAccount'
-import MyOrder from '../MyOrder'
-import MyOrders from '../MyOrders'
-import NotFound from '../NotFound'
-import SingIn from '../SingIn'
+import { useRoutes, BrowserRouter } from 'react-router-dom';
+import Home from '../Home';
+import MyAccount from '../MyAccount';
+import MyOrder from '../MyOrder';
+import MyOrders from '../MyOrders';
+import NotFound from '../NotFound';
+import SingIn from '../SingIn';
+import Navbar from '../../Components/Navbar';
 import './App.css'
 
   const AppRoutes = () => {
@@ -22,9 +23,10 @@ import './App.css'
 
   const App = () =>  {
   return (
-   <BrowserRouter>
+    <BrowserRouter>
       <AppRoutes/>
-   </BrowserRouter>
+      <Navbar/>
+    </BrowserRouter>
   )
 }
 
