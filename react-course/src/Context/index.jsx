@@ -8,4 +8,4 @@ export const ShoppingCartProvider = ({children}) => {
         {children}
         </ShoppingCartContext.Provider>
     )
-    }
+}
