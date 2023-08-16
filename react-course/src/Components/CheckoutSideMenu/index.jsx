@@ -6,7 +6,11 @@ import './styles.css'
 
     const CheckoutSideMenu = () => {
     const context = useContext(ShoppingCartContext)
-    console.log('CART: ', context.cartProducts)
+
+    const handleDelete = (id) => {
+        const filteredProducts = context.cartProducts.filter(product => product.id != id)
+        context.setCartProducts(filteredProducts)
+    }
 
     return (
         <aside
@@ -19,14 +23,16 @@ import './styles.css'
                 onClick={() => context.closeCheckoutSideMenu()}></XMarkIcon>
             </div>
         </div>
-        <div className='px-6'>
+        <div className='px-6 overflow-y-scroll'>
             {
             context.cartProducts.map(product => (
                 <OrderCard
                 key={product.id}
+                id={product.id}
                 title={product.title}
                 imageUrl={product.images}
                 price={product.price}
+                handleDelete={handleDelete}
                 />
             ))
             }
@@ -34,5 +40,4 @@ import './styles.css'
         </aside>
     )
     }
-
 export default CheckoutSideMenu
