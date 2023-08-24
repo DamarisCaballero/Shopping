@@ -5,11 +5,11 @@ import { ShoppingCartContext } from '../../Context'
 import Layout from '../../Components/Layout'
 import OrderCard from '../../Components/OrderCard'
 
-    function MyOrder() {
+function MyOrder() {
     const context = useContext(ShoppingCartContext)
     const currentPath = window.location.pathname
-    let index = currentPath.substring(currentPath.lastIndexOf('/') + 1 )
-    if(index === 'last') index = context.order?.length - 1
+    let index = currentPath.substring(currentPath.lastIndexOf('/') + 1)
+    if (index === 'last') index = context.order?.length - 1
 
     return (
         <Layout>
@@ -34,6 +34,6 @@ import OrderCard from '../../Components/OrderCard'
         </div>
         </Layout>
     )
-    }
+}
 
 export default MyOrder
