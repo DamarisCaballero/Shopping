@@ -17,6 +17,6 @@ const OrdersCard = props => {
         </div>
         </div>
     )
-}
+    }
 
 export default OrdersCard

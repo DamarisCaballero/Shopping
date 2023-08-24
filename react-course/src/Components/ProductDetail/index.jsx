@@ -30,6 +30,6 @@ const ProductDetail = () => {
         </p>
         </aside>
     )
-    }
+}
 
 export default ProductDetail

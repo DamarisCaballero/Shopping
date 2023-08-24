@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { ShoppingBagIcon } from '@heroicons/react/24/solid'
 import { ShoppingCartContext } from '../../Context'
 
-    const Navbar = () => {
+const Navbar = () => {
     const context = useContext(ShoppingCartContext)
     const activeStyle = 'underline underline-offset-4'
 
@@ -78,7 +78,7 @@ import { ShoppingCartContext } from '../../Context'
         </ul>
         <ul className='flex items-center gap-3'>
             <li className='text-black/60'>
-            damaris@
+            teff@platzi.com
             </li>
             <li>
             <NavLink
