@@ -6,7 +6,7 @@ import OrderCard from '../../Components/OrderCard'
 import { totalPrice } from '../../utils'
 import './styles.css'
 
-    const CheckoutSideMenu = () => {
+const CheckoutSideMenu = () => {
     const context = useContext(ShoppingCartContext)
 
     const handleDelete = (id) => {
@@ -24,6 +24,7 @@ import './styles.css'
 
         context.setOrder([...context.order, orderToAdd])
         context.setCartProducts([])
+        context.setSearchByTitle(null)
     }
 
     return (
@@ -63,6 +64,5 @@ import './styles.css'
         </aside>
     )
     }
-
 
 export default CheckoutSideMenu
